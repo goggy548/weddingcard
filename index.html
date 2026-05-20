@@ -326,13 +326,13 @@ font-size:2.5rem;
 
 <div class="glass card" style="max-width:500px;margin:auto;text-align:center;">
 
-<img src="qr.png" class="qr" alt="Venue QR">
+<img src="google_maps_location_qr.png" class="qr" alt="Venue QR">
 
 <p style="margin-top:20px">
 Scan the QR code for instant Google Maps navigation
 </p>
 
-<button onclick="window.open('#')">
+<button onclick="window.open('https://maps.app.goo.gl/WGUMLDPYyHYBqsb3A','_blank')">
 Get Directions
 </button>
 
@@ -342,7 +342,7 @@ Get Directions
 <section class="section" id="rsvp">
 <h2 class="title">RSVP</h2>
 
-<form class="glass card">
+<form class="glass card" onsubmit="event.preventDefault(); alert('Thanks');">
 
 <input type="text" placeholder="Full Name">
 
@@ -399,19 +399,4 @@ const now = new Date().getTime();
 
 const distance = weddingDate - now;
 
-const days = Math.floor(distance/(1000*60*60*24));
-const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-const mins = Math.floor((distance%(1000*60*60))/(1000*60));
-const secs = Math.floor((distance%(1000*60))/1000);
-
-document.getElementById("days").innerText=days;
-document.getElementById("hours").innerText=hours;
-document.getElementById("mins").innerText=mins;
-document.getElementById("secs").innerText=secs;
-
-},1000);
-
-</script>
-
-</body>
-</html>
+const days = Math.floor(distance/(1000
