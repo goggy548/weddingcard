@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sona ❤️ Sreeroop | Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--gold:#d4af37;
+--cream:#f8f5ef;
+--glass:rgba(255,255,255,.12);
+--border:rgba(255,255,255,.2);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at top left,rgba(212,175,55,.25),transparent 35%),
+radial-gradient(circle at bottom right,rgba(255,255,255,.08),transparent 35%);
+animation:floatbg 10s infinite alternate;
+}
+
+@keyframes floatbg{
+from{transform:translateY(0);}
+to{transform:translateY(-20px);}
+}
+
+.content{
+position:relative;
+z-index:2;
+}
+
+.subtitle{
+letter-spacing:3px;
+color:var(--gold);
+margin-bottom:20px;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.1rem;
+margin-bottom:15px;
+}
+
+.glass{
+background:var(--glass);
+backdrop-filter:blur(15px);
+border:1px solid var(--border);
+border-radius:25px;
+}
+
+.section{
+padding:90px 8%;
+}
+
+.title{
+font-family:'Playfair Display',serif;
+font-size:2.5rem;
+text-align:center;
+margin-bottom:50px;
+color:var(--gold);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+padding:30px;
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 15px 40px rgba(212,175,55,.3);
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:50%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.25),
+transparent
+);
+transition:.8s;
+}
+
+.card:hover::before{
+left:150%;
+}
+
+.card h3{
+font-family:'Playfair Display',serif;
+font-size:2rem;
+margin-bottom:10px;
+color:var(--gold);
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.count{
+width:120px;
+padding:25px;
+text-align:center;
+}
+
+.count span{
+display:block;
+font-size:2rem;
+font-weight:700;
+color:var(--gold);
+}
+
+.qr{
+max-width:280px;
+margin:auto;
+display:block;
+border-radius:20px;
+transition:.5s;
+}
+
+.qr:hover{
+transform:scale(1.05);
+}
+
+button{
+padding:14px 28px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,var(--gold),#f5d77a);
+font-weight:600;
+cursor:pointer;
+margin-top:20px;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(212,175,55,.4);
+}
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,select{
+padding:15px;
+border-radius:12px;
+border:none;
+outline:none;
+}
+
+footer{
+padding:50px;
+text-align:center;
+background:#0b1120;
+margin-top:50px;
+}
+
+.heart{
+animation:pulse 1.5s infinite;
+display:inline-block;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.2);}
+}
+
+.nav{
+position:fixed;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+padding:12px 25px;
+z-index:999;
+display:flex;
+gap:20px;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+h1{
+font-size:2.5rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="glass nav">
+<a href="#couple">Couple</a>
+<a href="#details">Details</a>
+<a href="#location">Location</a>
+<a href="#rsvp">RSVP</a>
+</nav>
+
+<section class="hero">
+<div class="content">
+<div class="subtitle">TOGETHER WITH THEIR FAMILIES</div>
+
+<h1>Sona ❤️ Sreeroop</h1>
+
+<p>Request the honour of your presence at their wedding celebration</p>
+
+<p>31 May 2026 • 11:00 AM</p>
+<p>City Plaza Auditorium, Cheeral</p>
+
+<div class="countdown">
+<div class="glass count"><span id="days">0</span>Days</div>
+<div class="glass count"><span id="hours">0</span>Hours</div>
+<div class="glass count"><span id="mins">0</span>Minutes</div>
+<div class="glass count"><span id="secs">0</span>Seconds</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="couple">
+<h2 class="title">The Couple</h2>
+
+<div class="cards">
+
+<div class="glass card">
+<h3>Sona</h3>
+<p>D/O Thomas Chacko & Salomi Thomas</p>
+<br>
+<p>Kandathinkara House</p>
+<p>Noolpuzha Post</p>
+</div>
+
+<div class="glass card">
+<h3>Sreeroop</h3>
+<p>S/O Sreekumar & Sanila Sreekumar</p>
+<br>
+<p>Karippadath House</p>
+<p>Nambiarkunnu</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="details">
+<h2 class="title">Wedding Details</h2>
+
+<div class="cards">
+
+<div class="glass card">
+<h3>📅 Date</h3>
+<p>31 May 2026</p>
+</div>
+
+<div class="glass card">
+<h3>🕚 Time</h3>
+<p>11:00 AM</p>
+</div>
+
+<div class="glass card">
+<h3>📍 Venue</h3>
+<p>City Plaza Auditorium</p>
+<p>Cheeral</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="location">
+<h2 class="title">Find Your Way</h2>
+
+<div class="glass card" style="max-width:500px;margin:auto;text-align:center;">
+
+<img src="qr.png" class="qr" alt="Venue QR">
+
+<p style="margin-top:20px">
+Scan the QR code for instant Google Maps navigation
+</p>
+
+<button onclick="window.open('#')">
+Get Directions
+</button>
+
+</div>
+</section>
+
+<section class="section" id="rsvp">
+<h2 class="title">RSVP</h2>
+
+<form class="glass card">
+
+<input type="text" placeholder="Full Name">
+
+<input type="tel" placeholder="Mobile Number">
+
+<input type="number" placeholder="Number of Guests">
+
+<select>
+<option>Will Attend</option>
+<option>Unable to Attend</option>
+</select>
+
+<button type="submit">
+Confirm Attendance
+</button>
+
+</form>
+</section>
+
+<section class="section">
+<h2 class="title">Blessings</h2>
+
+<div class="glass card" style="max-width:700px;margin:auto;text-align:center;">
+<p style="font-size:1.2rem">
+"Your presence, prayers and blessings will make our day truly special."
+</p>
+</div>
+</section>
+
+<footer>
+<h2>Sona ❤️ Sreeroop</h2>
+
+<p style="margin-top:10px">
+With Love <span class="heart">❤️</span>
+</p>
+
+<p style="margin-top:10px">
+Regards : Ajith
+</p>
+
+<p>
+31 May 2026
+</p>
+</footer>
+
+<script>
+
+const weddingDate =
+new Date("May 31, 2026 11:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+
+const distance = weddingDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const mins = Math.floor((distance%(1000*60*60))/(1000*60));
+const secs = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerText=days;
+document.getElementById("hours").innerText=hours;
+document.getElementById("mins").innerText=mins;
+document.getElementById("secs").innerText=secs;
+
+},1000);
+
+</script>
+
+</body>
+</html>
